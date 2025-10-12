@@ -32,10 +32,10 @@ export function Footer() {
               <div className="flex flex-wrap gap-4">
                 {siteConfig.company.founders.map((founder) => (
                   <span
-                    key={founder}
+                    key={founder.name}
                     className="text-background/80 font-medium"
                   >
-                    {founder}
+                    {founder.name}
                   </span>
                 ))}
               </div>

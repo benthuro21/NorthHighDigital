@@ -3,14 +3,14 @@
 import { motion } from "framer-motion";
 
 const logos = [
-  "TechCorp",
-  "StartupXYZ",
-  "InnovateLab",
-  "ScaleUp",
-  "GrowthCo",
-  "FutureTech",
-  "NextGen",
-  "Prodigy",
+  "Dysipher",
+  "Cribora",
+  "MindlyAI",
+  "INSERT",
+  "INSERT",
+  "FABRICATE",
+  "FABRICATE",
+  "FABRICATE",
 ];
 
 export function Marquee() {

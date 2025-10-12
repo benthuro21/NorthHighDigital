@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { siteConfig } from "@/site.config";
 
 export function WhyUs() {
@@ -69,31 +70,38 @@ export function WhyUs() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
               {siteConfig.company.founders.map((founder, index) => (
                 <motion.div
-                  key={founder}
+                  key={founder.name}
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                   viewport={{ once: true }}
                   className="text-center"
                 >
-                  <div className="w-20 h-20 bg-gradient-to-br from-accent to-accent/70 rounded-full flex items-center justify-center mb-4 mx-auto">
-                    <span className="text-2xl font-bold text-foreground">
-                      {founder
-                        .split(" ")
-                        .map((n) => n[0])
-                        .join("")}
-                    </span>
+                  <div className="w-24 h-24 rounded-full overflow-hidden mb-4 mx-auto border border-border shadow-sm">
+                    <Image
+                      src={founder.image}
+                      alt={founder.name}
+                      width={96}
+                      height={96}
+                      className="object-cover w-full h-full"
+                    />
                   </div>
-                  <h4 className="font-semibold font-heading">{founder}</h4>
-                  <p className="text-sm text-foreground/70">Co-Founder</p>
+
+                  <h4 className="font-semibold font-heading">{founder.name}</h4>
+                  <p className="text-sm text-foreground/70">{founder.title}</p>
                 </motion.div>
               ))}
             </div>
             <p className="text-foreground/70 mt-6 font-body max-w-2xl mx-auto">
-              Ben and Ardi bring decades of combined experience in software
-              development, product design, and business strategy. They founded
-              AT Studios to help ambitious founders and brands build software
-              that actually works.
+              Ben and Ardi bring years of combined experience in software
+              development, product design, and business strategy. Together, they
+              founded AT Studios with a shared belief that great software should
+              be both functional and inspiring. From early-stage startups to
+              growing brands, they’ve helped teams turn ambitious ideas into
+              elegant, scalable products that solve real problems. Their
+              approach blends technical precision with creative strategy,
+              ensuring every project not only works flawlessly but stands out in
+              an increasingly crowded digital world.
             </p>
           </div>
         </motion.div>

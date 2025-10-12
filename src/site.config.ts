@@ -1,10 +1,19 @@
 export const siteConfig = {
   // Company Info
   company: {
-    name: "AT Studios",
+    name: "AT Digital Solutions",
     tagline: "We ship fast, clean software for founders & brands.",
     subhead: "Design, build, and iterate — from idea to v1 to scale.",
-    founders: ["Ben Thuroczy", "Ardi Ahmed"],
+    founders: [{
+      name: "Ben Thuroczy",
+      title: "Co-Founder",
+      image: "/images/founders/ardi.png"
+    },
+    {
+      name: "Ardi Ahmed",
+      title: "Co-Founder",
+      image: "/images/founders/ardi.png"
+    }],
     calendlyLink: "https://calendly.com/at-studios/discovery-call",
   },
 
@@ -44,6 +53,11 @@ export const siteConfig = {
       description: "Technical solutions that scale with your business.",
       icon: "growth",
     },
+    {
+      title: "Him Engineering",
+      description: "Technical solutions that scale with your business.",
+      icon: "growth",
+    }
   ],
 
   // Case Studies
@@ -132,19 +146,14 @@ export const siteConfig = {
   // Testimonials
   testimonials: [
     {
-      quote: "AT Studios delivered our MVP in 3 weeks. The quality exceeded our expectations and the team was incredibly responsive throughout the process.",
-      author: "Sarah Chen",
-      role: "Founder, TechStart",
+      quote: "AT's team delivered our MVP in 3 weeks. The quality exceeded our expectations and the team was incredibly responsive throughout the process.",
+      author: "Hower LAST NAME",
+      role: "Founder, Cribora",
     },
     {
       quote: "Working with Ben and Ardi was a game-changer. They understood our vision and brought it to life with clean, scalable code.",
-      author: "Marcus Rodriguez",
-      role: "CEO, GrowthCo",
-    },
-    {
-      quote: "The attention to detail and user experience focus is unmatched. Our conversion rates improved by 200% after their redesign.",
-      author: "Emily Watson",
-      role: "Product Manager, ScaleUp",
+      author: "Junna Park",
+      role: "CEO, Dysipher",
     },
   ],
 

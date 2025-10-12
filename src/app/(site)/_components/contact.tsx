@@ -162,7 +162,8 @@ ${formData.message}`;
                 size="lg"
                 className="w-full font-medium"
               >
-                Send Message
+                Send Message (email, consider removing this section entirely and
+                just routing to calendly link) (insert mail logo)
               </Button>
             </form>
           </motion.div>

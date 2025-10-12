@@ -39,7 +39,7 @@ export function Header() {
               whileHover={{ scale: 1.05 }}
               className="text-2xl font-bold font-heading text-foreground"
             >
-              AT Studios
+              AT Digital Solutions
             </motion.div>
           </Link>
 
