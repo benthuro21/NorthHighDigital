@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 
 const logos = [
   "Dysipher",
-  "Cribora",
+  "Fast Cleans Auto",
   "MindlyAI",
   "Hunt Law Firm",
-  "Dysipher",
   "Cribora",
-  "MindlyAI",
-  "Hunt Law Firm",
+  "Bolesta Landscaping",
+  "Eosso Management",
+  "Metuchen YMCA",
 ];
 
 export function Marquee() {
