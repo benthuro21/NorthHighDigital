@@ -73,7 +73,7 @@ export function Header() {
               asChild
               variant="accent"
               size="sm"
-              className="font-medium hover:bg-black"
+              className="font-medium"
             >
               <Link href={siteConfig.company.calendlyLink} target="_blank">
                 Book a discovery call

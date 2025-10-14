@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { siteConfig } from "@/site.config";
 import Link from "next/link";
 import { Button } from "./ui/button";
@@ -38,8 +39,13 @@ export function CaseStudies() {
               className="group relative bg-background rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-all duration-300"
             >
               {/* Image placeholder */}
-              <div className="relative h-48 bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center">
-                <div className="text-6xl opacity-20">💻</div>
+              <div className="relative aspect-[16/9] w-full bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center">
+                <Image 
+                  src={study.image} 
+                  alt={study.title} 
+                  className="object-cover w-full h-full" 
+                  fill
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
               </div>
 

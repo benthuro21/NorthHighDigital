@@ -62,40 +62,41 @@ export const siteConfig = {
 
   // Case Studies
   caseStudies: [
+    
     {
-      title: "E-commerce Platform",
-      result: "300% increase in conversion rate",
-      tags: ["React", "Node.js", "Stripe"],
-      image: "/placeholder-case-1.jpg",
+      title: "Luxury Real Estate Showcase + Lead Engine",
+      result: "150% boost in property inquiries",
+      tags: ["Next.js", "HubSpot", "Mapbox"],
+      image: "/images/case-studies/realty-group-case-study.png",
     },
     {
-      title: "SaaS Dashboard",
+      title: "Boutique Dental Practice Platform",
+      result: "2x more local patient appointments",
+      tags: ["Google Calendar", "Twilio", "Next.js"],
+      image: "/images/case-studies/dental-clinic-case-study.png",
+    },
+    {
+      title: "Law Firm Landing Page + Bookings",
+      result: "300% increase in online client bookings.",
+      tags: ["Calendly", "Next.js", "Stripe"],
+      image: "/images/case-studies/law-firm-case-study.png",
+    },
+    {
+      title: "Plumbing Services Website + CRM",
       result: "50% reduction in support tickets",
-      tags: ["Next.js", "TypeScript", "PostgreSQL"],
+      tags: ["Next.js", "CRM", "QuickBooks"],
       image: "/placeholder-case-2.jpg",
     },
     {
-      title: "Mobile App",
-      result: "4.8 App Store rating",
-      tags: ["React Native", "Firebase", "AWS"],
-      image: "/placeholder-case-3.jpg",
+      title: "High-End Fitness Studio Booking Suite",
+      result: "70% increase in recurring memberships",
+      tags: ["React", "Stripe", "Supabase"],
+      image: "/images/case-studies/fitness-studio-case-study.png",
     },
     {
-      title: "AI Chatbot",
-      result: "80% faster customer response",
-      tags: ["OpenAI", "Python", "FastAPI"],
-      image: "/placeholder-case-4.jpg",
-    },
-    {
-      title: "Analytics Platform",
-      result: "Real-time insights for 10k+ users",
-      tags: ["Vue.js", "D3.js", "ClickHouse"],
-      image: "/placeholder-case-5.jpg",
-    },
-    {
-      title: "Automation Tool",
-      result: "90% time savings on manual tasks",
-      tags: ["Python", "Zapier", "Slack API"],
+      title: "Accounting Firm Client Portal + Dashboard",
+      result: "60% faster document turnaround",
+      tags: ["AWS", "Next.js", "Slack API"],
       image: "/placeholder-case-6.jpg",
     },
   ],

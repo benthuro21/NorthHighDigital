@@ -22,7 +22,7 @@ export function Marquee() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-8"
         >
           <p className="text-sm font-medium text-border uppercase tracking-wider">
             Trusted by innovative companies

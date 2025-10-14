@@ -18,8 +18,8 @@ export default function Home() {
         <Marquee />
         {/* <Services /> */}
         <CaseStudies />
-        <WhyUs />
         <Process />
+        <WhyUs />
         <Testimonials />
         <Contact />
       </main>
