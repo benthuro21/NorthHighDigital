@@ -155,6 +155,11 @@ export const siteConfig = {
       author: "Junna Park",
       role: "CEO, Dysipher",
     },
+    {
+      quote: "Working with Ben and Ardi was a game-changer. They understood our vision and brought it to life with clean, scalable code.",
+      author: "Ardi Ahmed",
+      role: "CEO, Dysipher",
+    },
   ],
 
   // Social Links

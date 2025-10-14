@@ -14,6 +14,17 @@ export function Header() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+
+      // Scroll progress logic
+      const scrollTop = window.scrollY;
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+
+      const progressBar = document.getElementById("scroll-progress");
+      if (progressBar) {
+        progressBar.style.width = `${scrollPercent}%`;
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -58,7 +69,12 @@ export function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button asChild variant="accent" size="sm" className="font-medium hover:bg-black">
+            <Button
+              asChild
+              variant="accent"
+              size="sm"
+              className="font-medium hover:bg-black"
+            >
               <Link href={siteConfig.company.calendlyLink} target="_blank">
                 Book a discovery call
               </Link>
@@ -123,6 +139,10 @@ export function Header() {
           )}
         </AnimatePresence>
       </div>
+      <div
+        id="scroll-progress"
+        className="absolute bottom-0 left-0 h-[2px] bg-[var(--accent)] w-0 transition-[width] duration-75"
+      />
     </motion.header>
   );
 }

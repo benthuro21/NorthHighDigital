@@ -3,7 +3,7 @@
 :root {
  --background: #F9F7F3;   /* ivory white */
 --foreground: #1B1F3B;   /* ink blue */
---accent: #3A7CA5;       /* airy azure */
+--accent: #275572;       /* airy azure */
 --muted: #F2A35E;        /* light amber */
 --border: #E6E1DA;
 }
@@ -24,6 +24,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow: overlay;
 }
 
 body {
@@ -43,15 +44,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  display: none;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--muted);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--border);
+  background: var(--foreground);
   border-radius: 4px;
 }
 

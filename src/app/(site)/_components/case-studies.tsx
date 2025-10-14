@@ -2,6 +2,9 @@
 
 import { motion } from "framer-motion";
 import { siteConfig } from "@/site.config";
+import Link from "next/link";
+import { Button } from "./ui/button";
+import { ArrowRight } from "lucide-react";
 
 export function CaseStudies() {
   return (
@@ -76,16 +79,17 @@ export function CaseStudies() {
           <p className="text-lg text-foreground/70 mb-6 font-body">
             Ready to see results like these for your business?
           </p>
-          <motion.a
-            href={siteConfig.company.calendlyLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center px-8 py-4 bg-accent text-foreground font-semibold rounded-lg hover:bg-accent/90 transition-colors"
+          <Button
+            asChild
+            variant="accent"
+            size="lg"
+            className="group font-medium"
           >
-            Start Your Project
-          </motion.a>
+            <Link href={siteConfig.company.calendlyLink} target="_blank">
+              Start your success story
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </Button>
         </motion.div>
       </div>
     </section>

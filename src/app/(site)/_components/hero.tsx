@@ -9,7 +9,7 @@ import { TypingText } from "./ui/typingtext";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(135deg,var(--background)_0%,var(--muted)_40%,var(--accent)_100%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.05),transparent_60%)]" />
@@ -33,9 +33,7 @@ export function Hero() {
               className="text-base sm:text-lg tracking-wide text-foreground/80 font-body uppercase"
             >
               Welcome to{" "}
-              <span className="font-semibold">
-                {siteConfig.company.name}
-              </span>
+              <span className="font-semibold">{siteConfig.company.name}</span>
             </motion.p>
             {/* Main Tagline */}
             <motion.h1
@@ -86,7 +84,7 @@ export function Hero() {
               </Link>
             </Button>
 
-            <Button asChild variant="ghost" size="lg" className="font-medium">
+            <Button asChild variant="shaded" size="lg" className="font-medium">
               <Link href="#work">See our case studies</Link>
             </Button>
           </motion.div>
