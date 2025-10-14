@@ -27,8 +27,8 @@ export function Header() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-md border-b border-border"
-          : "bg-transparent"
+          ? "bg-[var(--muted)] text-[var(--background)] shadow-md border-b border-border"
+          : "bg-transparent text-foreground"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,9 +37,9 @@ export function Header() {
           <Link href="/" className="flex items-center space-x-2">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-2xl font-bold font-heading text-foreground"
+              className="py-2 text-2xl sm:text-2xl md:text-2xl lg:text-3xl font-bold font-heading text-foreground"
             >
-              AT Digital Solutions
+              North High Digital
             </motion.div>
           </Link>
 
@@ -58,12 +58,7 @@ export function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button
-              asChild
-              variant="accent"
-              size="sm"
-              className="font-medium"
-            >
+            <Button asChild variant="accent" size="sm" className="font-medium hover:bg-black">
               <Link href={siteConfig.company.calendlyLink} target="_blank">
                 Book a discovery call
               </Link>
@@ -71,7 +66,9 @@ export function Header() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
+          <Button
+            variant="ghost"
+            size="icon"
             className="md:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
@@ -81,7 +78,7 @@ export function Header() {
             ) : (
               <Menu className="h-6 w-6" />
             )}
-          </button>
+          </Button>
         </div>
 
         {/* Mobile Menu */}

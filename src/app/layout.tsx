@@ -15,10 +15,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AT Studios - We ship fast, clean software for founders & brands",
+  title: "North High Digital - We ship fast, clean software for founders & brands",
   description: "Design, build, and iterate — from idea to v1 to scale. Boutique software agency founded by Ben Thuroczy and Ardi Ahmed.",
   openGraph: {
-    title: "AT Studios - We ship fast, clean software for founders & brands",
+    title: "North High Digital - We ship fast, clean software for founders & brands",
     description: "Design, build, and iterate — from idea to v1 to scale. Boutique software agency founded by Ben Thuroczy and Ardi Ahmed.",
     type: "website",
     locale: "en_US",

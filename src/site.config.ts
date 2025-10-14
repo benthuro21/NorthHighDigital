@@ -1,9 +1,9 @@
 export const siteConfig = {
   // Company Info
   company: {
-    name: "AT Digital Solutions",
+    name: "North High Digital",
     tagline: "We ship fast, clean software for founders & brands.",
-    subhead: "Design, build, and iterate — from idea to v1 to scale.",
+    subhead: "Communicating throughout design, build, and scale.",
     founders: [{
       name: "Ben Thuroczy",
       title: "Co-Founder",

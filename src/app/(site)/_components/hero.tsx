@@ -5,13 +5,14 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { siteConfig } from "@/site.config";
+import { TypingText } from "./ui/typingtext";
 
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(250,204,21,0.1),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,var(--background)_0%,var(--muted)_40%,var(--accent)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.05),transparent_60%)]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
@@ -20,15 +21,41 @@ export function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="space-y-8"
         >
-          {/* Main Tagline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold font-heading leading-tight"
-          >
-            {siteConfig.company.tagline}
-          </motion.h1>
+          {/* Intro Text */}
+          <div className="space-y-2">
+            {" "}
+            {/* was 8 → 2 */}
+            {/* Intro Text */}
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="text-base sm:text-lg tracking-wide text-foreground/80 font-body uppercase"
+            >
+              Welcome to{" "}
+              <span className="font-semibold">
+                {siteConfig.company.name}
+              </span>
+            </motion.p>
+            {/* Main Tagline */}
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-6xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold font-heading leading-tight"
+            >
+              We build{" "}
+              <TypingText
+                words={[
+                  "presences that breathe.",
+                  "dreams from ideas.",
+                  "unforgettable experiences.",
+                ]}
+                highlightColor="var(--accent)"
+                textColor="var(--foreground)"
+              />
+            </motion.h1>
+          </div>
 
           {/* Subhead */}
           <motion.p
@@ -59,8 +86,8 @@ export function Hero() {
               </Link>
             </Button>
 
-            <Button asChild variant="outline" size="lg" className="font-medium">
-              <Link href="#work">See our work</Link>
+            <Button asChild variant="ghost" size="lg" className="font-medium">
+              <Link href="#work">See our case studies</Link>
             </Button>
           </motion.div>
         </motion.div>
