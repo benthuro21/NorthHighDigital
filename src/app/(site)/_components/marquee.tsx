@@ -7,15 +7,15 @@ const logos = [
   "Cribora",
   "MindlyAI",
   "Hunt Law Firm",
-  "INSERT",
-  "FABRICATE",
-  "FABRICATE",
-  "FABRICATE",
+  "Dysipher",
+  "Cribora",
+  "MindlyAI",
+  "Hunt Law Firm",
 ];
 
 export function Marquee() {
   return (
-    <section className="pt-12 pb-16 bg-border/80">
+    <section className="pt-12 pb-16 bg-foreground/90">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -24,7 +24,7 @@ export function Marquee() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <p className="text-sm font-medium text-foreground/60 uppercase tracking-wider">
+          <p className="text-sm font-medium text-border uppercase tracking-wider">
             Trusted by innovative companies
           </p>
         </motion.div>
@@ -48,7 +48,7 @@ export function Marquee() {
             {logos.map((logo, index) => (
               <div
                 key={`first-${index}`}
-                className="flex-shrink-0 text-2xl font-bold text-foreground/20 hover:text-foreground/40 transition-colors"
+                className="flex-shrink-0 text-3xl font-bold text-border hover:text-border/40 transition-colors"
               >
                 {logo}
               </div>
@@ -57,7 +57,7 @@ export function Marquee() {
             {logos.map((logo, index) => (
               <div
                 key={`second-${index}`}
-                className="flex-shrink-0 text-2xl font-bold text-foreground/20 hover:text-foreground/40 transition-colors"
+                className="flex-shrink-0 text-3xl font-bold text-border hover:text-border/40 transition-colors"
               >
                 {logo}
               </div>

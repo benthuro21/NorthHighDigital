@@ -3,7 +3,7 @@ export const siteConfig = {
   company: {
     name: "North High Digital",
     tagline: "We ship fast, clean software for founders & brands.",
-    subhead: "Communicating throughout design, build, and scale.",
+    subhead: "Redefining digital excellence through code and communication.",
     founders: [{
       name: "Ben Thuroczy",
       title: "Co-Founder",
