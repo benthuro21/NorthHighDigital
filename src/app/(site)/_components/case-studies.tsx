@@ -13,7 +13,7 @@ export function CaseStudies() {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0B1120] via-[#131B2E] to-[#0B1120]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(195,255,0,0.05),transparent_70%)]" />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,13 +44,13 @@ export function CaseStudies() {
             >
               {/* Image placeholder */}
               <div className="relative aspect-[16/9] w-full bg-gradient-to-br from-[#131B2E] to-[#1A1A1A] flex items-center justify-center">
-                <Image 
-                  src={study.image} 
-                  alt={study.title} 
-                  className="object-cover w-full h-full" 
+                <Image
+                  src={study.image}
+                  alt={study.title}
+                  className="object-cover w-full h-full"
                   fill
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent" />
               </div>
 
               <div className="p-6">
@@ -77,7 +77,6 @@ export function CaseStudies() {
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );

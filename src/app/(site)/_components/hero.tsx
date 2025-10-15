@@ -28,7 +28,6 @@ export function Hero() {
           {/* Intro Text */}
           <div className="space-y-2">
             {" "}
-            {/* Intro Text */}
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}

@@ -7,7 +7,7 @@ export const siteConfig = {
     founders: [{
       name: "Benjamin Thuroczy",
       title: "Co-Founder",
-      image: "/images/founders/Thuroczy.1 (1 of 1)-X3.jpg"
+      image: "/images/founders/ben.jpg"
     },
     {
       name: "Ardi Ahmed",

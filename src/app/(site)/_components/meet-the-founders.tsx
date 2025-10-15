@@ -8,7 +8,7 @@ export function MeetTheFounders() {
     {
       name: "Benjamin Thuroczy",
       title: "Co-Founder & CEO",
-      image: "/images/founders/Thuroczy.1 (1 of 1)-X3.jpg",
+      image: "/images/founders/ben.jpg",
       bio: "Software engineer with experience at JPMorgan Chase, where he worked as a Software Engineer and Business Analyst developing AI-powered solutions for risk management. Previously held roles at GE Aerospace managing supply chain operations and Swagelok as a Process Engineer. Combines technical expertise with data-driven strategy to build scalable solutions.",
     },
     {

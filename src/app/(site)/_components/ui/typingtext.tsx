@@ -51,29 +51,38 @@ export function TypingText({
     return () => clearTimeout(timer);
   }, [text, isDeleting, loopNum, words, typingSpeed, deletingSpeed, pauseTime]);
 
-  return (
-  <motion.span
-    className="relative inline-block px-1"
-    animate={{ color: highlight ? textColor : "#fff" }} // 👈 swap colors here
-    transition={{ duration: 0.3 }}
-  >
-    {/* Highlight block */}
-    <motion.span
-      className="absolute inset-0 rounded-sm -z-10"
-      animate={{
-        backgroundColor: highlight ? highlightColor : "rgba(0,0,0,0)",
-        scaleX: highlight ? 1 : 0,
-        originX: 0,
-      }}
-      transition={{ duration: 0.4, ease: "easeInOut" }}
-    />
-    {text}
-    <motion.span
-      className="inline-block ml-1 w-[2px] h-6 bg-[var(--accent)]"
-      animate={{ opacity: [1, 0, 1] }}
-      transition={{ duration: 0.8, repeat: Infinity }}
-    />
-  </motion.span>
-);
+  const currentWord = words[loopNum % words.length];
+  const isFullWord = text === currentWord;
 
+  return (
+    <motion.span className="relative inline-block px-1">
+      {/* Background highlight animation */}
+      <motion.span
+        className="absolute inset-0 rounded-sm -z-10"
+        animate={{
+          backgroundColor: highlight ? highlightColor : "rgba(0,0,0,0)",
+          scaleX: highlight ? 1 : 0,
+          originX: 0,
+        }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+      />
+
+      {/* Typing text with smooth color transition */}
+      <motion.span
+        animate={{
+          color: isFullWord ? "var(--accent)" : textColor,
+        }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+      >
+        {text}
+      </motion.span>
+
+      {/* Blinking cursor */}
+      <motion.span
+        className="inline-block ml-1 w-[2px] h-6 bg-[var(--accent)]"
+        animate={{ opacity: [1, 0, 1] }}
+        transition={{ duration: 0.8, repeat: Infinity }}
+      />
+    </motion.span>
+  );
 }
