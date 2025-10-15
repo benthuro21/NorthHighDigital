@@ -15,7 +15,7 @@ const logos = [
 
 export function Marquee() {
   return (
-    <section className="pt-12 pb-16 bg-foreground/90">
+    <section className="pt-12 pb-16 bg-[#0B1120]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -24,7 +24,7 @@ export function Marquee() {
           viewport={{ once: true }}
           className="text-center mb-8"
         >
-          <p className="text-sm font-medium text-border uppercase tracking-wider">
+          <p className="text-sm font-medium text-accent uppercase tracking-wider">
             Trusted by innovative companies
           </p>
         </motion.div>
@@ -48,7 +48,7 @@ export function Marquee() {
             {logos.map((logo, index) => (
               <div
                 key={`first-${index}`}
-                className="flex-shrink-0 text-3xl font-bold text-border hover:text-border/40 transition-colors"
+                className="flex-shrink-0 text-3xl font-bold text-white/40 hover:text-accent transition-colors"
               >
                 {logo}
               </div>
@@ -57,7 +57,7 @@ export function Marquee() {
             {logos.map((logo, index) => (
               <div
                 key={`second-${index}`}
-                className="flex-shrink-0 text-3xl font-bold text-border hover:text-border/40 transition-colors"
+                className="flex-shrink-0 text-3xl font-bold text-white/40 hover:text-accent transition-colors"
               >
                 {logo}
               </div>

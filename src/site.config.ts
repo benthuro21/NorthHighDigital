@@ -5,16 +5,16 @@ export const siteConfig = {
     tagline: "We ship fast, clean software for founders & brands.",
     subhead: "Redefining digital excellence through code and communication.",
     founders: [{
-      name: "Ben Thuroczy",
+      name: "Benjamin Thuroczy",
       title: "Co-Founder",
-      image: "/images/founders/ardi.png"
+      image: "/images/founders/Thuroczy.1 (1 of 1)-X3.jpg"
     },
     {
       name: "Ardi Ahmed",
       title: "Co-Founder",
       image: "/images/founders/ardi.png"
     }],
-    calendlyLink: "https://calendly.com/at-studios/discovery-call",
+    calendlyLink: "https://calendly.com/benthuroczy",
   },
 
   // Navigation
@@ -147,17 +147,17 @@ export const siteConfig = {
   // Testimonials
   testimonials: [
     {
-      quote: "AT's team delivered our MVP in 3 weeks. The quality exceeded our expectations and the team was incredibly responsive throughout the process.",
+      quote: "North High Digital's team delivered our MVP in 3 weeks. The quality exceeded our expectations and the team was incredibly responsive throughout the process.",
       author: "Hower LAST NAME",
       role: "Founder, Cribora",
     },
     {
-      quote: "Working with Ben and Ardi was a game-changer. They understood our vision and brought it to life with clean, scalable code.",
+      quote: "Working with Benjamin and Ardi was a game-changer. They understood our vision and brought it to life with clean, scalable code.",
       author: "Junna Park",
       role: "CEO, Dysipher",
     },
     {
-      quote: "Working with Ben and Ardi was a game-changer. They understood our vision and brought it to life with clean, scalable code.",
+      quote: "Working with Benjamin and Ardi was a game-changer. They understood our vision and brought it to life with clean, scalable code.",
       author: "Ardi Ahmed",
       role: "CEO, Dysipher",
     },
@@ -165,9 +165,9 @@ export const siteConfig = {
 
   // Social Links
   social: {
-    twitter: "https://twitter.com/atstudios",
-    linkedin: "https://linkedin.com/company/at-studios",
-    github: "https://github.com/at-studios",
+    twitter: "https://twitter.com/northhighdigital",
+    linkedin: "https://linkedin.com/company/north-high-digital",
+    github: "https://github.com/north-high-digital",
   },
 
   // Contact

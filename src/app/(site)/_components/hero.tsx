@@ -10,9 +10,13 @@ import { TypingText } from "./ui/typingtext";
 export function Hero() {
   return (
     <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,var(--background)_0%,var(--muted)_40%,var(--accent)_100%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.05),transparent_60%)]" />
+      {/* Background Pattern - Ramp Dark Hero Style with Apple Glass */}
+      <div className="absolute inset-0 bg-[#0B1120]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0B1120] via-[#131B2E] to-[#0B1120]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(195,255,0,0.08),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(195,255,0,0.05),transparent_60%)]" />
+      {/* Apple liquid glass effect overlay */}
+      <div className="absolute inset-0 backdrop-blur-[1px] bg-gradient-to-b from-transparent via-[rgba(19,27,46,0.3)] to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
@@ -29,7 +33,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-base sm:text-lg tracking-wide text-foreground/80 font-body uppercase"
+              className="text-base sm:text-lg tracking-wide text-white/80 font-body uppercase"
             >
               Welcome to{" "}
               <span className="font-semibold">{siteConfig.company.name}</span>
@@ -39,17 +43,17 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-6xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold font-heading leading-tight"
+              className="text-6xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold font-heading leading-tight text-white"
             >
               We build{" "}
               <TypingText
                 words={[
-                  "presences that breathe.",
-                  "dreams from ideas.",
-                  "unforgettable experiences.",
+                  "software that scales.",
+                  "apps that inspire.",
+                  "websites that convert.",
                 ]}
                 highlightColor="var(--accent)"
-                textColor="var(--foreground)"
+                textColor="#FFFFFF"
               />
             </motion.h1>
           </div>
@@ -59,7 +63,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg sm:text-xl lg:text-2xl text-foreground/70 max-w-3xl mx-auto font-body"
+            className="text-lg sm:text-xl lg:text-2xl text-white/70 max-w-3xl mx-auto font-body"
           >
             {siteConfig.company.subhead}
           </motion.p>
@@ -91,7 +95,7 @@ export function Hero() {
       </div>
       {/* Scroll Indicator */}
       <motion.div
-        className="absolute bottom-8 flex flex-col items-center text-foreground/60"
+        className="absolute bottom-8 flex flex-col items-center text-white/40"
         animate={{ y: [0, 8, 0] }}
         transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
       >

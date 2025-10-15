@@ -11,7 +11,6 @@ export function Process() {
       title: "Digital Foundation",
       subtitle:
         "Design and develop a high-converting website that turns visitors into paying clients.",
-      color: "from-emerald-600 to-green-500",
       results: [
         "Mobile-responsive and SEO-optimized design",
         "Modern architecture (Next.js + TypeScript)",
@@ -23,7 +22,6 @@ export function Process() {
       title: "Automation & Bookings Engine",
       subtitle:
         "Automate scheduling, payments, and client communication to save time and increase conversions.",
-      color: "from-violet-700 to-purple-500",
       results: [
         "Integrated booking systems (Calendly, custom, etc.)",
         "Automated confirmations and reminders",
@@ -35,7 +33,6 @@ export function Process() {
       title: "AI-Powered Growth Engine",
       subtitle:
         "Leverage automation and AI to personalize the customer journey, drive retention, and unlock scale.",
-      color: "from-sky-700 to-blue-500",
       results: [
         "Chatbots and voice AI for 24/7 lead capture",
         "Automated follow-ups and data insights",
@@ -47,9 +44,13 @@ export function Process() {
   return (
     <section
       id="process"
-      className="py-24 bg-foreground from-foreground to-foreground/20"
+      className="py-24 bg-[#0B1120] relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Background gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0B1120] via-[#131B2E] to-[#0B1120]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(195,255,0,0.05),transparent_70%)]" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -59,26 +60,26 @@ export function Process() {
           className="text-center mb-16"
         >
           {/* Preheading */}
-          <p className="text-sm uppercase tracking-widest text-border mb-3 mt-5">
+          <p className="text-sm uppercase tracking-widest text-accent mb-3 mt-5 font-semibold">
             What We Do
           </p>
 
           {/* Main Heading */}
-          <h2 className="text-5xl sm:text-5xl font-bold font-heading mb-9 text-border">
+          <h2 className="text-5xl sm:text-5xl font-bold font-heading mb-9 text-white">
             From Website to{" "}
-            <span className="bg-gradient-to-r from-emerald-400 via-green-500 to-emerald-600 bg-clip-text text-transparent drop-shadow-sm">
+            <span className="text-accent">
               Growth Engine
             </span>
             .
           </h2>
 
           {/* Subheading */}
-          <p className="text-xl text-lighterblue font-medium italic">
+          <p className="text-xl text-accent font-medium italic">
             Build. Automate. Scale.
           </p>
 
           {/* Description */}
-          <p className="text-lg text-border/90 max-w-2xl mx-auto mt-10 font-body">
+          <p className="text-lg text-white/70 max-w-2xl mx-auto mt-10 font-body">
             Our 3-phase process turns your digital presence into an automated
             client machine — powered by smart design, seamless automation, and
             AI.
@@ -95,35 +96,34 @@ export function Process() {
               transition={{ duration: 0.4, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{
-                scale: 1.05, // ← You can increase/decrease this for more/less grow
-                boxShadow:
-                  "0 0 30px rgba(255,255,255,0.15), 0 0 50px rgba(0,255,100,0.1)",
+                scale: 1.02,
+                y: -8,
               }}
-              className={`relative rounded-2xl h-[535px] p-8 text-background bg-gradient-to-br ${step.color} shadow-lg flex flex-col justify-between transition-all duration-300`}
+              className="relative rounded-2xl h-[535px] p-8 bg-[#1A1A1A] border border-white/10 hover:border-accent/50 shadow-lg hover:shadow-accent/20 flex flex-col justify-between transition-all duration-300"
             >
-              {/* Radiate Glow (subtle pulse effect) */}
+              {/* Accent glow on hover */}
               <motion.div
-                className="absolute inset-0 rounded-2xl bg-white/10 opacity-0 pointer-events-none"
-                whileHover={{ opacity: 0.15 }}
-                transition={{ duration: 0.15 }}
+                className="absolute inset-0 rounded-2xl bg-gradient-to-br from-accent/5 to-transparent opacity-0 pointer-events-none"
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
               />
 
               <div className="relative z-10">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-sm font-semibold bg-background/20 px-3 py-1 rounded-full">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-xs font-bold bg-accent/10 text-accent px-3 py-1 rounded-full border border-accent/20">
                     {step.id}
                   </span>
                 </div>
-                <h3 className="text-2xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-background/90 text-sm mb-6">
+                <h3 className="text-2xl font-bold mb-3 text-white">{step.title}</h3>
+                <p className="text-white/70 text-sm mb-6 leading-relaxed">
                   {step.subtitle}
                 </p>
 
-                <div className="space-y-2 text-background/90">
+                <div className="space-y-3 text-white/80">
                   {step.results.map((result, i) => (
-                    <div key={i} className="flex items-center gap-2">
-                      <span className="text-lg">•</span>
-                      <span>{result}</span>
+                    <div key={i} className="flex items-start gap-3">
+                      <span className="text-accent mt-1 text-sm">●</span>
+                      <span className="text-sm leading-relaxed">{result}</span>
                     </div>
                   ))}
                 </div>
@@ -133,9 +133,9 @@ export function Process() {
                 href={siteConfig.company.calendlyLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ x: 5 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center gap-2 text-background/80 font-semibold mt-8 relative z-10"
+                className="inline-flex items-center gap-2 text-accent hover:text-lighterblue font-semibold mt-8 relative z-10 transition-colors"
               >
                 Learn More <ArrowRight className="w-4 h-4" />
               </motion.a>
@@ -143,38 +143,6 @@ export function Process() {
           ))}
         </div>
 
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="text-center mt-18"
-        >
-          <h3 className="text-3xl font-bold text-border mb-3">
-            Ready to build the system your business deserves?
-          </h3>
-          <p className="text-border/70 mb-8 font-body">
-            Get a free strategy session and see how automation, AI, and design
-            can unlock new clients for your business.
-          </p>
-
-          <motion.a
-            href={siteConfig.company.calendlyLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.15 }}
-            className="inline-flex items-center gap-2 px-8 py-3 
-               bg-gradient-to-r from-blue-500 to-sky-500 
-               text-background font-semibold rounded-full 
-               shadow-lg hover:shadow-xl transition-all"
-          >
-            Start Your Journey
-            <ArrowRight className="w-4 h-4" />
-          </motion.a>
-        </motion.div>
       </div>
     </section>
   );

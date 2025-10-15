@@ -9,8 +9,12 @@ import { ArrowRight } from "lucide-react";
 
 export function CaseStudies() {
   return (
-    <section id="work" className="py-24 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="work" className="py-24 bg-[#0B1120] relative overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0B1120] via-[#131B2E] to-[#0B1120]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(195,255,0,0.05),transparent_70%)]" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -18,10 +22,10 @@ export function CaseStudies() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading mb-6 text-white">
             Our Work
           </h2>
-          <p className="text-lg text-foreground/70 max-w-2xl mx-auto font-body">
+          <p className="text-lg text-white/70 max-w-2xl mx-auto font-body">
             Real results for real businesses. Here&apos;s how we&apos;ve helped
             our clients succeed.
           </p>
@@ -36,10 +40,10 @@ export function CaseStudies() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -8 }}
-              className="group relative bg-background rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-all duration-300"
+              className="group relative bg-[#1A1A1A] rounded-2xl overflow-hidden border border-white/10 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/20 transition-all duration-300"
             >
               {/* Image placeholder */}
-              <div className="relative aspect-[16/9] w-full bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center">
+              <div className="relative aspect-[16/9] w-full bg-gradient-to-br from-[#131B2E] to-[#1A1A1A] flex items-center justify-center">
                 <Image 
                   src={study.image} 
                   alt={study.title} 
@@ -50,7 +54,7 @@ export function CaseStudies() {
               </div>
 
               <div className="p-6">
-                <h3 className="text-xl font-semibold font-heading mb-2 group-hover:text-accent transition-colors">
+                <h3 className="text-xl font-semibold font-heading mb-2 text-white group-hover:text-accent transition-colors">
                   {study.title}
                 </h3>
 
@@ -60,7 +64,7 @@ export function CaseStudies() {
                   {study.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 bg-muted text-foreground/70 text-sm rounded-full font-medium"
+                      className="px-3 py-1 bg-white/10 text-white/70 text-sm rounded-full font-medium border border-white/20"
                     >
                       {tag}
                     </span>
@@ -74,29 +78,6 @@ export function CaseStudies() {
           ))}
         </div>
 
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <p className="text-lg text-foreground/70 mb-6 font-body">
-            Ready to see results like these for your business?
-          </p>
-          <Button
-            asChild
-            variant="accent"
-            size="lg"
-            className="group font-medium"
-          >
-            <Link href={siteConfig.company.calendlyLink} target="_blank">
-              Start your success story
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </Button>
-        </motion.div>
       </div>
     </section>
   );

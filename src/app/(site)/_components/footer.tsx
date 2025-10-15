@@ -7,7 +7,7 @@ import { Linkedin, Mail } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-background py-16">
+    <footer className="bg-[#1A1A1A] text-background py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -19,7 +19,7 @@ export function Footer() {
             className="lg:col-span-2"
           >
             <Link href="/" className="flex items-center space-x-2 mb-6">
-              <div className="text-2xl font-bold font-heading">AT Studios</div>
+              <div className="text-2xl font-bold font-heading">North High Digital</div>
             </Link>
 
             <p className="text-background/70 font-body leading-relaxed mb-6 max-w-md">
@@ -120,7 +120,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
-                  className="inline-flex items-center px-4 py-2 bg-accent text-foreground font-semibold rounded-lg hover:bg-accent/90 transition-colors text-sm"
+                  className="inline-flex items-center px-4 py-2 bg-accent text-[#0B1120] font-semibold rounded-lg hover:bg-lighterblue transition-colors text-sm shadow-lg shadow-accent/20"
                 >
                   Book a Call
                 </motion.a>
@@ -138,7 +138,7 @@ export function Footer() {
           className="border-t border-background/20 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center"
         >
           <p className="text-background/60 font-body text-sm">
-            © {new Date().getFullYear()} AT Studios. All rights reserved.
+            © {new Date().getFullYear()} North High Digital. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
             <Link
