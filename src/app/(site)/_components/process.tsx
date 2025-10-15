@@ -8,50 +8,38 @@ export function Process() {
   const steps = [
     {
       id: "Step 01",
-      title: "Product Architecture",
+      title: "Digital Foundation",
       subtitle:
-        "Build a scalable, high-performing foundation for your digital product.",
+        "Design and develop a high-converting website that turns visitors into paying clients.",
       color: "from-emerald-600 to-green-500",
       results: [
-        "Fast, maintainable codebase",
-        "Modern stack setup (Next.js, TypeScript)",
-        "Pixel-perfect UI/UX",
+        "Mobile-responsive and SEO-optimized design",
+        "Modern architecture (Next.js + TypeScript)",
+        "Built-in booking and CRM integrations",
       ],
     },
     {
       id: "Step 02",
-      title: "Core Engineering",
+      title: "Automation & Bookings Engine",
       subtitle:
-        "Bring your product to life through clean code and integrated systems.",
+        "Automate scheduling, payments, and client communication to save time and increase conversions.",
       color: "from-violet-700 to-purple-500",
       results: [
-        "API & database integration",
-        "Robust feature implementation",
-        "Automated testing & CI/CD",
+        "Integrated booking systems (Calendly, custom, etc.)",
+        "Automated confirmations and reminders",
+        "Payment collection and CRM syncing",
       ],
     },
     {
       id: "Step 03",
-      title: "Optimization Engine",
+      title: "AI-Powered Growth Engine",
       subtitle:
-        "Deploy, analyze, and refine your product for growth and performance.",
+        "Leverage automation and AI to personalize the customer journey, drive retention, and unlock scale.",
       color: "from-sky-700 to-blue-500",
       results: [
-        "Speed & SEO optimization",
-        "Scalable infrastructure",
-        "Continuous improvements",
-      ],
-    },
-    {
-      id: "Step 04",
-      title: "Continuous Partnership",
-      subtitle:
-        "Ongoing improvements, updates, and scaling as your goals evolve.",
-      color: "from-indigo-700 to-indigo-500",
-      results: [
-        "Monthly maintenance & support",
-        "Feature expansion & new releases",
-        "Growth analytics & insights",
+        "Chatbots and voice AI for 24/7 lead capture",
+        "Automated follow-ups and data insights",
+        "Continuous optimization and performance tracking",
       ],
     },
   ];
@@ -59,7 +47,7 @@ export function Process() {
   return (
     <section
       id="process"
-      className="py-24 bg-gradient-to-b from-background to-muted/20"
+      className="py-24 bg-foreground from-foreground to-foreground/20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -70,31 +58,57 @@ export function Process() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold font-heading mb-4">
-            Your product and our process.
-          </h2>
-          <p className="text-xl text-accent font-medium italic">
-            The perfect build.
+          {/* Preheading */}
+          <p className="text-sm uppercase tracking-widest text-border mb-3 mt-5">
+            What We Do
           </p>
-          <p className="text-lg text-foreground/70 max-w-2xl mx-auto mt-4 font-body">
-            Our proven 4-step development model — from architecture to growth —
-            ensures your software performs, scales, and evolves with your goals.
+
+          {/* Main Heading */}
+          <h2 className="text-5xl sm:text-5xl font-bold font-heading mb-9 text-border">
+            From Website to{" "}
+            <span className="bg-gradient-to-r from-emerald-400 via-green-500 to-emerald-600 bg-clip-text text-transparent drop-shadow-sm">
+              Growth Engine
+            </span>
+            .
+          </h2>
+
+          {/* Subheading */}
+          <p className="text-xl text-lighterblue font-medium italic">
+            Build. Automate. Scale.
+          </p>
+
+          {/* Description */}
+          <p className="text-lg text-border/90 max-w-2xl mx-auto mt-10 font-body">
+            Our 3-phase process turns your digital presence into an automated
+            client machine — powered by smart design, seamless automation, and
+            AI.
           </p>
         </motion.div>
 
         {/* Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <motion.div
               key={step.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ y: -8 }}
-              className={`rounded-2xl p-8 text-background bg-gradient-to-br ${step.color} shadow-xl flex flex-col justify-between`}
+              whileHover={{
+                scale: 1.05, // ← You can increase/decrease this for more/less grow
+                boxShadow:
+                  "0 0 30px rgba(255,255,255,0.15), 0 0 50px rgba(0,255,100,0.1)",
+              }}
+              className={`relative rounded-2xl h-[535px] p-8 text-background bg-gradient-to-br ${step.color} shadow-lg flex flex-col justify-between transition-all duration-300`}
             >
-              <div>
+              {/* Radiate Glow (subtle pulse effect) */}
+              <motion.div
+                className="absolute inset-0 rounded-2xl bg-white/10 opacity-0 pointer-events-none"
+                whileHover={{ opacity: 0.15 }}
+                transition={{ duration: 0.15 }}
+              />
+
+              <div className="relative z-10">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-sm font-semibold bg-background/20 px-3 py-1 rounded-full">
                     {step.id}
@@ -121,7 +135,7 @@ export function Process() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center gap-2 text-background/80 font-semibold mt-8"
+                className="inline-flex items-center gap-2 text-background/80 font-semibold mt-8 relative z-10"
               >
                 Learn More <ArrowRight className="w-4 h-4" />
               </motion.a>
@@ -133,29 +147,33 @@ export function Process() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="text-center mt-20"
+          className="text-center mt-18"
         >
-          <div className="bg-muted/50 rounded-2xl p-10 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-semibold font-heading mb-4">
-              Ready to start building?
-            </h3>
-            <p className="text-foreground/70 mb-6 font-body">
-              Let’s discuss your vision and see how our process can bring it to
-              life — from strategy to launch.
-            </p>
-            <motion.a
-              href={siteConfig.company.calendlyLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center px-6 py-3 bg-foreground text-background font-semibold rounded-lg hover:bg-foreground/90 transition-colors"
-            >
-              Book a Discovery Call
-            </motion.a>
-          </div>
+          <h3 className="text-3xl font-bold text-border mb-3">
+            Ready to build the system your business deserves?
+          </h3>
+          <p className="text-border/70 mb-8 font-body">
+            Get a free strategy session and see how automation, AI, and design
+            can unlock new clients for your business.
+          </p>
+
+          <motion.a
+            href={siteConfig.company.calendlyLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.15 }}
+            className="inline-flex items-center gap-2 px-8 py-3 
+               bg-gradient-to-r from-blue-500 to-sky-500 
+               text-background font-semibold rounded-full 
+               shadow-lg hover:shadow-xl transition-all"
+          >
+            Start Your Journey
+            <ArrowRight className="w-4 h-4" />
+          </motion.a>
         </motion.div>
       </div>
     </section>

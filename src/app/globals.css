@@ -3,7 +3,8 @@
 :root {
  --background: #F9F7F3;   /* ivory white */
 --foreground: #1B1F3B;   /* ink blue */
---accent: #275572;       /* airy azure */
+--accent: #275572;/* airy azure */
+--lighterblue:  #417799;      
 --muted: #F2A35E;        /* light amber */
 --border: #E6E1DA;
 }
@@ -16,6 +17,7 @@
   --color-border: var(--border);
   --font-heading: var(--font-manrope);
   --font-body: var(--font-inter);
+  --color-lighterblue: var(--lighterblue);
 }
 
 * {

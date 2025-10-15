@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
 import { siteConfig } from "@/site.config";
 import { TypingText } from "./ui/typingtext";
@@ -89,6 +89,14 @@ export function Hero() {
           </motion.div>
         </motion.div>
       </div>
+      {/* Scroll Indicator */}
+      <motion.div
+        className="absolute bottom-8 flex flex-col items-center text-foreground/60"
+        animate={{ y: [0, 8, 0] }}
+        transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+      >
+        <ChevronDown className="h-6 w-6" />
+      </motion.div>
     </section>
   );
 }

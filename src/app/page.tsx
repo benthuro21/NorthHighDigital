@@ -8,6 +8,7 @@ import { WhyUs } from "./(site)/_components/why-us";
 import { Testimonials } from "./(site)/_components/testimonials";
 import { Contact } from "./(site)/_components/contact";
 import { Footer } from "./(site)/_components/footer";
+import { MeetTheFounders } from "./(site)/_components/meet-the-founders";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         {/* <Services /> */}
         <CaseStudies />
         <Process />
+        <MeetTheFounders />
         <WhyUs />
         <Testimonials />
         <Contact />
