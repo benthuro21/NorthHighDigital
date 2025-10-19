@@ -4,16 +4,18 @@ export const siteConfig = {
     name: "North High Digital",
     tagline: "We ship fast, clean software for founders & brands.",
     subhead: "Redefining digital excellence through code and communication.",
-    founders: [{
-      name: "Benjamin Thuroczy",
-      title: "Co-Founder",
-      image: "/images/founders/ben.jpg"
-    },
-    {
-      name: "Ardi Ahmed",
-      title: "Co-Founder",
-      image: "/images/founders/ardi.png"
-    }],
+    founders: [
+      {
+        name: "Benjamin Thuroczy",
+        title: "Co-Founder",
+        image: "/images/founders/ben.jpg",
+      },
+      {
+        name: "Ardi Ahmed",
+        title: "Co-Founder",
+        image: "/images/founders/ardi.png",
+      },
+    ],
     calendlyLink: "https://calendly.com/benthuroczy",
   },
 
@@ -30,12 +32,14 @@ export const siteConfig = {
   services: [
     {
       title: "Product Design",
-      description: "User-centered design that converts visitors into customers.",
+      description:
+        "User-centered design that converts visitors into customers.",
       icon: "design",
     },
     {
       title: "Web & Mobile Apps",
-      description: "Fast, responsive applications built with modern tech stacks.",
+      description:
+        "Fast, responsive applications built with modern tech stacks.",
       icon: "mobile",
     },
     {
@@ -57,12 +61,11 @@ export const siteConfig = {
       title: "Him Engineering",
       description: "Technical solutions that scale with your business.",
       icon: "growth",
-    }
+    },
   ],
 
   // Case Studies
   caseStudies: [
-    
     {
       title: "Luxury Real Estate Showcase + Lead Engine",
       result: "150% boost in property inquiries",
@@ -95,7 +98,8 @@ export const siteConfig = {
     },
     {
       title: "Luxury Travel Agency + Virtual Meeting Integration",
-      result: "150% increase in voyage inquiries after automating client follow-ups",
+      result:
+        "150% increase in voyage inquiries after automating client follow-ups",
       tags: ["Stripe", "Next.js", "Mapbox", "Calendly"],
       image: "/images/case-studies/travel-agency-case-study.png",
     },
@@ -106,22 +110,26 @@ export const siteConfig = {
     {
       step: "01",
       title: "Discover",
-      description: "We dive deep into your business goals, user needs, and technical requirements.",
+      description:
+        "We dive deep into your business goals, user needs, and technical requirements.",
     },
     {
       step: "02",
       title: "Design",
-      description: "Create wireframes, prototypes, and visual designs that align with your brand.",
+      description:
+        "Create wireframes, prototypes, and visual designs that align with your brand.",
     },
     {
       step: "03",
       title: "Build",
-      description: "Develop your solution using modern technologies and best practices.",
+      description:
+        "Develop your solution using modern technologies and best practices.",
     },
     {
       step: "04",
       title: "Iterate",
-      description: "Launch, measure, and continuously improve based on real user feedback.",
+      description:
+        "Launch, measure, and continuously improve based on real user feedback.",
     },
   ],
 
@@ -130,36 +138,42 @@ export const siteConfig = {
     {
       title: "Speed",
       value: "<4 weeks to v1",
-      description: "We move fast without compromising quality. Get your MVP to market quickly.",
+      description:
+        "We move fast without compromising quality. Get your MVP to market quickly.",
     },
     {
       title: "Craft",
       value: "Pixel-perfect",
-      description: "Every detail matters. We build software that looks and feels exceptional.",
+      description:
+        "Every detail matters. We build software that looks and feels exceptional.",
     },
     {
       title: "Partnership",
       value: "Long-term",
-      description: "We're not just vendors. We're your technical partners in growth.",
+      description:
+        "We're not just vendors. We're your technical partners in growth.",
     },
   ],
 
   // Testimonials
   testimonials: [
     {
-      quote: "North High Digital's team delivered our MVP in 3 weeks. The quality exceeded our expectations and the team was incredibly responsive throughout the process.",
-      author: "Hower LAST NAME",
+      quote:
+        "Working with Benjamin and Ardi was a game-changer. They understood our vision and brought it to life with clean, scalable code.",
+      author: "J. Park",
+      role: "CEO, Dysipher",
+    },
+    {
+      quote:
+        "North High Digital's team delivered our MVP in 3 weeks. The quality exceeded our expectations and the team was incredibly responsive throughout the process.",
+      author: "G. Hower",
       role: "Founder, Cribora",
     },
     {
-      quote: "Working with Benjamin and Ardi was a game-changer. They understood our vision and brought it to life with clean, scalable code.",
-      author: "Junna Park",
-      role: "CEO, Dysipher",
-    },
-    {
-      quote: "Working with Benjamin and Ardi was a game-changer. They understood our vision and brought it to life with clean, scalable code.",
-      author: "Ardi Ahmed",
-      role: "CEO, Dysipher",
+      quote:
+        "Partnering with Ben and Ardi completely transformed our digital presence. They delivered a product that not only looks great but performs flawlessly under real traffic.",
+      author: "Michael Eosso",
+      role: "Founder, Eosso Management",
     },
   ],
 
