@@ -19,7 +19,9 @@ export function Footer() {
             className="lg:col-span-2"
           >
             <Link href="/" className="flex items-center space-x-2 mb-6">
-              <div className="text-2xl font-bold font-heading">North High Digital</div>
+              <div className="text-2xl font-bold font-heading">
+                North High Digital
+              </div>
             </Link>
 
             <p className="text-background/70 font-body leading-relaxed mb-6 max-w-md">
@@ -27,41 +29,58 @@ export function Footer() {
               and iterate — from idea to v1 to scale.
             </p>
 
+            {/* Founders Section */}
             <div className="mb-6">
-              <p className="text-sm text-background/60 mb-2">Founded by</p>
-              <div className="flex flex-wrap gap-4">
+              <p className="text-sm text-background/60 mb-3">Founded by</p>
+              <div className="flex flex-col sm:flex-row gap-6">
                 {siteConfig.company.founders.map((founder) => (
-                  <span
+                  <div
                     key={founder.name}
-                    className="text-background/80 font-medium"
+                    className="flex flex-col sm:flex-row items-center gap-4 bg-background/5 rounded-xl p-4 border border-border/30 hover:border-border/60 transition-colors min-w-[260px]"
                   >
-                    {founder.name}
-                  </span>
+                    {/* Founder Image */}
+                    <img
+                      src={founder.image}
+                      alt={founder.name}
+                      className="w-14 h-14 rounded-full object-cover"
+                    />
+
+                    {/* Founder Info */}
+                    <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+                      <span className="text-background font-semibold text-lg">
+                        {founder.name}
+                      </span>
+                      <span className="text-background/70 text-sm">
+                        {founder.title}
+                      </span>
+
+                      <div className="flex gap-3 mt-2">
+                        {/* LinkedIn */}
+                        <motion.a
+                          href={founder.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.1 }}
+                          className="w-8 h-8 bg-background/10 rounded-md flex items-center justify-center hover:bg-background/20 transition-colors"
+                          aria-label={`${founder.name} LinkedIn`}
+                        >
+                          <Linkedin className="w-4 h-4 text-background" />
+                        </motion.a>
+
+                        {/* Email */}
+                        <motion.a
+                          href={`mailto:${founder.email}`}
+                          whileHover={{ scale: 1.1 }}
+                          className="w-8 h-8 bg-background/10 rounded-md flex items-center justify-center hover:bg-background/20 transition-colors"
+                          aria-label={`${founder.name} Email`}
+                        >
+                          <Mail className="w-4 h-4 text-background" />
+                        </motion.a>
+                      </div>
+                    </div>
+                  </div>
                 ))}
               </div>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex space-x-4">
-              <motion.a
-                href={siteConfig.social.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-background/20 transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5 text-background" />
-              </motion.a>
-
-              <motion.a
-                href={`mailto:${siteConfig.contact.email}`}
-                whileHover={{ scale: 1.1 }}
-                className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-background/20 transition-colors"
-                aria-label="Email"
-              >
-                <Mail className="w-5 h-5 text-background" />
-              </motion.a>
             </div>
           </motion.div>
 
@@ -138,20 +157,15 @@ export function Footer() {
           className="border-t border-background/20 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center"
         >
           <p className="text-background/60 font-body text-sm">
-            © {new Date().getFullYear()} North High Digital. All rights reserved.
+            © {new Date().getFullYear()} North High Digital. All rights
+            reserved.
           </p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
             <Link
-              href="/privacy"
+              href="/privacy-policy"
               className="text-background/60 hover:text-background transition-colors font-body text-sm"
             >
               Privacy Policy
-            </Link>
-            <Link
-              href="/terms"
-              className="text-background/60 hover:text-background transition-colors font-body text-sm"
-            >
-              Terms of Service
             </Link>
           </div>
         </motion.div>

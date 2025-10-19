@@ -8,11 +8,15 @@ export const siteConfig = {
       {
         name: "Benjamin Thuroczy",
         title: "Co-Founder",
+        linkedin: "https://www.linkedin.com/in/benjaminthuroczy/",
+        email: "benjamin@northhighdigital.com",
         image: "/images/founders/ben.jpg",
       },
       {
         name: "Ardi Ahmed",
         title: "Co-Founder",
+        linkedin: "https://www.com/linkedin.com/ardiahmed1",
+        email: "ardi@northhighdigital.com",
         image: "/images/founders/ardi.png",
       },
     ],
@@ -22,9 +26,8 @@ export const siteConfig = {
   // Navigation
   navigation: [
     { name: "Work", href: "#work" },
-    { name: "Services", href: "#services" },
     { name: "Process", href: "#process" },
-    { name: "About", href: "#about" },
+    { name: "The Team", href: "#founders" },
     { name: "Contact", href: "#contact" },
   ],
 
@@ -177,7 +180,7 @@ export const siteConfig = {
     },
   ],
 
-  // Social Links
+  // Social Links (NEED TO BE UPDATED)
   social: {
     twitter: "https://twitter.com/northhighdigital",
     linkedin: "https://linkedin.com/company/north-high-digital",
@@ -186,7 +189,7 @@ export const siteConfig = {
 
   // Contact
   contact: {
-    email: "hello@atstudios.com",
-    phone: "+1 (555) 123-4567",
+    email: "info@northhighdigital.com",
+    phone: "+1 (732) 397-7655",
   },
 };

@@ -22,7 +22,10 @@ export function MeetTheFounders() {
   ];
 
   return (
-    <section className="pt-10 pb-24 bg-[#0B1120] relative overflow-hidden">
+    <section
+      id="founders"
+      className="pt-10 pb-24 bg-[#0B1120] relative overflow-hidden"
+    >
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0B1120] via-[#131B2E] to-[#0B1120]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(195,255,0,0.05),transparent_70%)]" />
