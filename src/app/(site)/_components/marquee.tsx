@@ -8,9 +8,9 @@ const logos = [
   "MindlyAI",
   "Hunt Law Firm",
   "Cribora",
-  "Bolesta Landscaping",
+  "Benner Realty Group",
   "Eosso Management",
-  "Metuchen YMCA",
+  "All Smiles Dental",
 ];
 
 export function Marquee() {
@@ -48,7 +48,7 @@ export function Marquee() {
             {logos.map((logo, index) => (
               <div
                 key={`first-${index}`}
-                className="flex-shrink-0 text-3xl font-bold text-white/40 hover:text-accent transition-colors"
+                className="flex-shrink-0 text-3xl font-bold text-white/65 hover:text-accent transition-colors"
               >
                 {logo}
               </div>
@@ -57,7 +57,7 @@ export function Marquee() {
             {logos.map((logo, index) => (
               <div
                 key={`second-${index}`}
-                className="flex-shrink-0 text-3xl font-bold text-white/40 hover:text-accent transition-colors"
+                className="flex-shrink-0 text-3xl font-bold text-white/65 hover:text-accent transition-colors"
               >
                 {logo}
               </div>

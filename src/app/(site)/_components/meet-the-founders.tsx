@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { siteConfig } from "@/site.config";
+import { ArrowRight } from "lucide-react";
 
 export function MeetTheFounders() {
   const founders = [
@@ -15,17 +17,18 @@ export function MeetTheFounders() {
       name: "Ardi Ahmed",
       title: "Co-Founder & CTO",
       image: "/images/founders/ardi.png",
-      bio: "Software engineer with experience building production systems at high-growth startups. Designed and engineered a production chatbot and admin panel with Next.js and Ruby on Rails, implementing dynamic conversation flows and RESTful API integrations. Engineered backend pipelines for data storage and retrieval using PostgreSQL, with expertise in CI/CD deployment and Git workflows. Specializes in full-stack development, creating scalable solutions from database architecture to responsive UI.",
+      bio: "Software engineer with experience building production systems at high-growth startups. Master of designing and engineering production chat interfaces and admin panels with Next.js and Ruby on Rails, in order to implement dynamic conversation flows and RESTful API integrations. Expertise in initializing backend pipelines for data storage and retrieval using PostgreSQL, with a knack for CI/CD deployment and Git workflows. An esteemed full-stack development, creating scalable solutions from database architecture to responsive UI.",
     },
   ];
 
   return (
-    <section className="py-24 bg-[#0B1120] relative overflow-hidden">
+    <section className="pt-10 pb-24 bg-[#0B1120] relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0B1120] via-[#131B2E] to-[#0B1120]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(195,255,0,0.05),transparent_70%)]" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-10 relative z-10">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +44,8 @@ export function MeetTheFounders() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        {/* Founder Cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-40 gap-y-14 justify-items-center">
           {founders.map((founder, index) => (
             <motion.div
               key={founder.name}
@@ -49,29 +53,67 @@ export function MeetTheFounders() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-[#1A1A1A] rounded-2xl p-8 border border-white/10 hover:border-accent/50 transition-all duration-300"
+              className="bg-[#1A1A1A] rounded-2xl p-6 border border-white/10 hover:border-accent/50 transition-all duration-300 w-full max-w-[420px]"
             >
               <div className="flex flex-col items-center text-center">
-                <div className="w-96 h-96 rounded-full overflow-hidden mb-6 border-4 border-accent/30 shadow-lg">
+                <div className="w-64 h-64 rounded-full overflow-hidden mb-6 border-4 border-accent/30 shadow-lg">
                   <Image
                     src={founder.image}
                     alt={founder.name}
-                    width={384}
-                    height={384}
+                    width={256}
+                    height={256}
                     className="object-cover w-full h-full"
                   />
                 </div>
-                <h3 className="text-2xl font-bold font-heading text-white mb-2">
+                <h3 className="text-xl font-bold font-heading text-white mb-2">
                   {founder.name}
                 </h3>
-                <p className="text-accent font-semibold mb-6">{founder.title}</p>
-                <p className="text-white/70 font-body leading-relaxed">
+                <p className="text-accent font-semibold mb-5 text-sm">
+                  {founder.title}
+                </p>
+                <p className="text-white/70 font-body leading-relaxed text-sm sm:text-base">
                   {founder.bio}
                 </p>
               </div>
             </motion.div>
           ))}
         </div>
+
+        {/* Call to Action Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mt-20"
+        >
+          <h2 className="text-4xl sm:text-5xl font-bold font-heading mb-3 text-white">
+            Let's Build Something Great Together
+          </h2>
+          <p className="text-lg text-white/70 font-body">
+            We&#39;re hands-on founders who love collaborating diretly with
+            clients.
+          </p>
+          <p className="text-lg text-white/70 mb-4 font-body">
+            No layers, no fluff - just clear communication and results.
+          </p>
+
+          <motion.a
+            href={siteConfig.company.calendlyLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.15 }}
+            className="inline-flex items-center gap-2 px-8 py-4 
+              bg-accent hover:bg-lighterblue 
+              text-[#0B1120] font-bold rounded-xl text-base
+              shadow-md shadow-accent/30 hover:shadow-accent/40 transition-all"
+          >
+            Figure Out What's Next
+            <ArrowRight className="w-4 h-4" />
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   );

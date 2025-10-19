@@ -10,7 +10,7 @@ export function WhyUs() {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0B1120] via-[#131B2E] to-[#0B1120]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(195,255,0,0.05),transparent_70%)]" />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -20,7 +20,7 @@ export function WhyUs() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading mb-6 text-white">
-            Why Choose North High Digital?
+            Why Choose <span className="text-accent">North High Digital?</span>
           </h2>
           <p className="text-lg text-white/70 max-w-2xl mx-auto font-body">
             We&apos;re not just another agency. We&apos;re your technical

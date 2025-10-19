@@ -49,7 +49,7 @@ export function Process() {
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0B1120] via-[#131B2E] to-[#0B1120]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(195,255,0,0.05),transparent_70%)]" />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <motion.div
@@ -66,11 +66,7 @@ export function Process() {
 
           {/* Main Heading */}
           <h2 className="text-5xl sm:text-5xl font-bold font-heading mb-9 text-white">
-            From Website to{" "}
-            <span className="text-accent">
-              Growth Engine
-            </span>
-            .
+            From Website to <span className="text-accent">Growth Engine</span>.
           </h2>
 
           {/* Subheading */}
@@ -114,7 +110,9 @@ export function Process() {
                     {step.id}
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold mb-3 text-white">{step.title}</h3>
+                <h3 className="text-2xl font-bold mb-3 text-white">
+                  {step.title}
+                </h3>
                 <p className="text-white/70 text-sm mb-6 leading-relaxed">
                   {step.subtitle}
                 </p>
@@ -142,7 +140,38 @@ export function Process() {
             </motion.div>
           ))}
         </div>
+        {/* Call to Action Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mt-12"
+        >
+          <h2 className="text-4xl sm:text-5xl font-bold font-heading mb-3 text-white">
+            Let's Transform Your Business
+          </h2>
+          <p className="text-lg text-white/70 mb-4 font-body">
+            See what's possible for your business - schedule a free strategy
+            call.
+          </p>
 
+          <motion.a
+            href={siteConfig.company.calendlyLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.15 }}
+            className="inline-flex items-center gap-2 px-8 py-4 
+              bg-accent hover:bg-lighterblue 
+              text-[#0B1120] font-bold rounded-xl text-base
+              shadow-md shadow-accent/30 hover:shadow-accent/40 transition-all"
+          >
+            Start Your Project
+            <ArrowRight className="w-4 h-4" />
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   );
