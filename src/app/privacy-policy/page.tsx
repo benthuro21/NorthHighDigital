@@ -1,71 +1,69 @@
-// app/privacy/page.tsx
+// app/privacy-policy/page.tsx
 "use client";
 
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { siteConfig } from "@/site.config";
+import { Header } from "../(site)/_components/header";
+import { Footer } from "../(site)/_components/footer";
 
 export default function PrivacyPolicyPage() {
-  const companyName =
-    (siteConfig as any)?.company?.name ||
-    (siteConfig as any)?.name ||
-    "North High Digital";
-  const contactEmail =
-    (siteConfig as any)?.contact?.email ||
-    (siteConfig as any)?.email ||
-    "hello@northighdigital.com";
-  const contactPhone =
-    (siteConfig as any)?.contact?.phone ||
-    (siteConfig as any)?.phone ||
-    "+1 (555) 000-0000";
+  const companyName = siteConfig.company.name;
+  const contactEmail = siteConfig.company.contact.email;
+  const contactPhone = siteConfig.company.contact.phone;
 
   const lastUpdated = "October 19, 2025";
 
   return (
-    <section className="relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,var(--background)_0%,var(--muted)_40%,var(--accent)_100%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.06),transparent_60%)]" />
+    <div className="min-h-screen">
+      <Header />
+      <section className="relative overflow-hidden pt-20">
+        {/* Background - Match hero styling */}
+        <div className="absolute inset-0 bg-[#0B1120]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0B1120] via-[#131B2E] to-[#0B1120]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(195,255,0,0.08),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(195,255,0,0.05),transparent_60%)]" />
+        <div className="absolute inset-0 backdrop-blur-[1px] bg-gradient-to-b from-transparent via-[rgba(19,27,46,0.3)] to-transparent" />
 
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        {/* Back link */}
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="mb-6"
-        >
-          <Link
-            href="/"
-            className="inline-flex items-center text-foreground/70 hover:text-foreground transition"
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          {/* Back link */}
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="mb-6"
           >
-            <span className="mr-2">←</span> Back to Home
-          </Link>
-        </motion.div>
+            <Link
+              href="/"
+              className="inline-flex items-center text-white/70 hover:text-white transition-colors font-body"
+            >
+              <span className="mr-2">←</span> Back to Home
+            </Link>
+          </motion.div>
 
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.05 }}
-          className="mb-10"
-        >
-          <h1 className="text-4xl sm:text-5xl font-bold font-heading tracking-tight">
-            Privacy Policy
-          </h1>
-          <p className="text-foreground/70 mt-3">Last updated: {lastUpdated}</p>
-        </motion.div>
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.05 }}
+            className="mb-10"
+          >
+            <h1 className="text-4xl sm:text-5xl font-bold font-heading tracking-tight text-white">
+              Privacy Policy
+            </h1>
+            <p className="text-white/70 mt-3 font-body">Last updated: {lastUpdated}</p>
+          </motion.div>
 
-        {/* Card */}
-        <motion.article
-          initial={{ opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="rounded-2xl shadow-lg bg-background/60 ring-1 ring-foreground/10 backdrop-blur p-6 sm:p-10 space-y-10"
-        >
+          {/* Card - Match site glassmorphism */}
+          <motion.article
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="rounded-2xl shadow-lg bg-white/10 backdrop-blur-md border border-white/20 p-6 sm:p-10 space-y-10"
+          >
           <section>
-            <h2 className="text-2xl font-semibold mb-3">Introduction</h2>
-            <p className="text-foreground/80 leading-relaxed">
+            <h2 className="text-2xl font-semibold mb-3 text-white font-heading">Introduction</h2>
+            <p className="text-white/80 leading-relaxed font-body">
               At {companyName}, we respect your privacy and are committed to
               protecting your personal data. This privacy policy explains how we
               look after your personal data when you visit our website and
@@ -74,45 +72,45 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-3">
+            <h2 className="text-2xl font-semibold mb-3 text-white font-heading">
               Information We Collect
             </h2>
-            <p className="text-foreground/80 leading-relaxed mb-3">
+            <p className="text-white/80 leading-relaxed mb-3 font-body">
               We may collect, use, store, and transfer different kinds of
               personal data about you:
             </p>
-            <ul className="list-disc pl-6 space-y-2 text-foreground/80">
+            <ul className="list-disc pl-6 space-y-2 text-white/80 font-body">
               <li>
-                <span className="font-medium">Identity Data:</span> first name,
+                <span className="font-medium text-white">Identity Data:</span> first name,
                 last name, username or similar identifier
               </li>
               <li>
-                <span className="font-medium">Contact Data:</span> email address
+                <span className="font-medium text-white">Contact Data:</span> email address
                 and telephone numbers
               </li>
               <li>
-                <span className="font-medium">Technical Data:</span> internet
+                <span className="font-medium text-white">Technical Data:</span> internet
                 protocol (IP) address, browser type and version, time zone
                 setting and location, browser plug-in types and versions,
                 operating system and platform
               </li>
               <li>
-                <span className="font-medium">Usage Data:</span> information
+                <span className="font-medium text-white">Usage Data:</span> information
                 about how you use our website and services
               </li>
             </ul>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-3">
+            <h2 className="text-2xl font-semibold mb-3 text-white font-heading">
               How We Use Your Information
             </h2>
-            <p className="text-foreground/80 leading-relaxed mb-3">
+            <p className="text-white/80 leading-relaxed mb-3 font-body">
               We will only use your personal data when the law allows us to.
               Most commonly, we will use your personal data in the following
               circumstances:
             </p>
-            <ul className="list-disc pl-6 space-y-2 text-foreground/80">
+            <ul className="list-disc pl-6 space-y-2 text-white/80 font-body">
               <li>
                 Where we need to perform the contract we are about to enter into
                 or have entered into with you.
@@ -129,8 +127,8 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-3">Data Security</h2>
-            <p className="text-foreground/80 leading-relaxed">
+            <h2 className="text-2xl font-semibold mb-3 text-white font-heading">Data Security</h2>
+            <p className="text-white/80 leading-relaxed font-body">
               We have implemented appropriate security measures to prevent your
               personal data from being accidentally lost, used, or accessed in
               an unauthorized way, altered, or disclosed. We also limit access
@@ -142,12 +140,12 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-3">Your Legal Rights</h2>
-            <p className="text-foreground/80 leading-relaxed mb-3">
+            <h2 className="text-2xl font-semibold mb-3 text-white font-heading">Your Legal Rights</h2>
+            <p className="text-white/80 leading-relaxed mb-3 font-body">
               Under certain circumstances, you have rights under data protection
               laws in relation to your personal data, including the right to:
             </p>
-            <ul className="list-disc pl-6 space-y-2 text-foreground/80">
+            <ul className="list-disc pl-6 space-y-2 text-white/80 font-body">
               <li>Request access to your personal data</li>
               <li>Request correction of your personal data</li>
               <li>Request erasure of your personal data</li>
@@ -159,27 +157,27 @@ export default function PrivacyPolicyPage() {
                 your data
               </li>
             </ul>
-            <p className="text-foreground/80 leading-relaxed mt-3">
+            <p className="text-white/80 leading-relaxed mt-3 font-body">
               If you wish to exercise any of these rights, please contact us
               using the details below.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-3">Contact Us</h2>
-            <p className="text-foreground/80 leading-relaxed mb-3">
+            <h2 className="text-2xl font-semibold mb-3 text-white font-heading">Contact Us</h2>
+            <p className="text-white/80 leading-relaxed mb-3 font-body">
               If you have any questions about this privacy policy or our privacy
               practices, please contact us at:
             </p>
-            <div className="text-foreground/80 leading-relaxed">
+            <div className="text-white/80 leading-relaxed font-body">
               <p>
-                <span className="font-medium">{companyName}</span>
+                <span className="font-medium text-white">{companyName}</span>
               </p>
               <p>
                 Email:{" "}
                 <a
                   href={`mailto:${contactEmail}`}
-                  className="text-accent hover:underline"
+                  className="text-[var(--accent)] hover:underline transition-colors"
                 >
                   {contactEmail}
                 </a>
@@ -188,7 +186,7 @@ export default function PrivacyPolicyPage() {
                 Phone:{" "}
                 <a
                   href={`tel:${contactPhone}`}
-                  className="text-accent hover:underline"
+                  className="text-[var(--accent)] hover:underline transition-colors"
                 >
                   {contactPhone}
                 </a>
@@ -198,5 +196,7 @@ export default function PrivacyPolicyPage() {
         </motion.article>
       </div>
     </section>
+    <Footer />
+    </div>
   );
 }

@@ -49,17 +49,17 @@ export function Contact() {
             <p className="text-white/60 text-sm mb-4">Prefer to reach out directly?</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-white/80">
               <a
-                href={`mailto:${siteConfig.contact.email}`}
+                href={`mailto:${siteConfig.company.contact.email}`}
                 className="hover:text-accent transition-colors"
               >
-                {siteConfig.contact.email}
+                {siteConfig.company.contact.email}
               </a>
               <span className="hidden sm:block text-white/30">•</span>
               <a
-                href={`tel:${siteConfig.contact.phone}`}
+                href={`tel:${siteConfig.company.contact.phone}`}
                 className="hover:text-accent transition-colors"
               >
-                {siteConfig.contact.phone}
+                {siteConfig.company.contact.phone}
               </a>
             </div>
           </div>

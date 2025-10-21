@@ -119,18 +119,18 @@ export function Footer() {
             <div className="space-y-3">
               <div>
                 <a
-                  href={`mailto:${siteConfig.contact.email}`}
+                  href={`mailto:${siteConfig.company.contact.email}`}
                   className="text-background/70 hover:text-background transition-colors font-body"
                 >
-                  {siteConfig.contact.email}
+                  {siteConfig.company.contact.email}
                 </a>
               </div>
               <div>
                 <a
-                  href={`tel:${siteConfig.contact.phone}`}
+                  href={`tel:${siteConfig.company.contact.phone}`}
                   className="text-background/70 hover:text-background transition-colors font-body"
                 >
-                  {siteConfig.contact.phone}
+                  {siteConfig.company.contact.phone}
                 </a>
               </div>
               <div className="pt-4">

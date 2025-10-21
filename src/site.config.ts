@@ -21,6 +21,11 @@ export const siteConfig = {
       },
     ],
     calendlyLink: "https://calendly.com/benthuroczy",
+    // Contact
+    contact: {
+      email: "info@northhighdigital.com",
+      phone: "+1 (732) 397-7655",
+    },
   },
 
   // Navigation
@@ -185,11 +190,5 @@ export const siteConfig = {
     twitter: "https://twitter.com/northhighdigital",
     linkedin: "https://linkedin.com/company/north-high-digital",
     github: "https://github.com/north-high-digital",
-  },
-
-  // Contact
-  contact: {
-    email: "info@northhighdigital.com",
-    phone: "+1 (732) 397-7655",
   },
 };
