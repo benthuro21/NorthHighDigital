@@ -24,7 +24,7 @@ export function MeetTheFounders() {
   return (
     <section
       id="founders"
-      className="pt-10 pb-24 bg-[#0B1120] relative overflow-hidden"
+      className="pt-10 pb-10 bg-[#0B1120] relative overflow-hidden"
     >
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0B1120] via-[#131B2E] to-[#0B1120]" />
@@ -81,42 +81,6 @@ export function MeetTheFounders() {
             </motion.div>
           ))}
         </div>
-
-        {/* Call to Action Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mt-20"
-        >
-          <h2 className="text-4xl sm:text-5xl font-bold font-heading mb-3 text-white">
-            Let's Build Something Great Together
-          </h2>
-          <p className="text-lg text-white/70 font-body">
-            We&#39;re hands-on founders who love collaborating diretly with
-            clients.
-          </p>
-          <p className="text-lg text-white/70 mb-4 font-body">
-            No layers, no fluff - just clear communication and results.
-          </p>
-
-          <motion.a
-            href={siteConfig.company.calendlyLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.15 }}
-            className="inline-flex items-center gap-2 px-8 py-4 
-              bg-accent hover:bg-lighterblue 
-              text-[#0B1120] font-bold rounded-xl text-base
-              shadow-md shadow-accent/30 hover:shadow-accent/40 transition-all"
-          >
-            Figure Out What's Next
-            <ArrowRight className="w-4 h-4" />
-          </motion.a>
-        </motion.div>
       </div>
     </section>
   );
