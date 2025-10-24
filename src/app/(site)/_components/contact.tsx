@@ -20,12 +20,9 @@ export function Contact() {
           className="text-center"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading mb-6 text-white">
-            Ready to Get Started?
+            Get In Touch
           </h2>
-          <p className="text-xl text-white/70 mb-4 font-body">
-            Book a free strategy call to discuss your project.
-          </p>
-          <p className="text-sm text-accent mb-12 font-semibold">
+          <p className="text-sm text-accent mb-10 font-semibold">
             Serious inquiries only.
           </p>
 
@@ -36,33 +33,14 @@ export function Contact() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.15 }}
-            className="inline-flex items-center gap-2 px-10 py-5 
+            className="inline-flex items-center gap-2 px-10 py-5
                bg-accent hover:bg-lighterblue 
                text-[#0B1120] font-bold rounded-xl text-lg
                shadow-lg shadow-accent/30 hover:shadow-accent/40 transition-all"
           >
-            Book Strategy Call
+            Book a Strategy Call
             <ArrowRight className="w-5 h-5" />
           </motion.a>
-
-          <div className="mt-12 pt-12 border-t border-white/10">
-            <p className="text-white/60 text-sm mb-4">Prefer to reach out directly?</p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-white/80">
-              <a
-                href={`mailto:${siteConfig.company.contact.email}`}
-                className="hover:text-accent transition-colors"
-              >
-                {siteConfig.company.contact.email}
-              </a>
-              <span className="hidden sm:block text-white/30">•</span>
-              <a
-                href={`tel:${siteConfig.company.contact.phone}`}
-                className="hover:text-accent transition-colors"
-              >
-                {siteConfig.company.contact.phone}
-              </a>
-            </div>
-          </div>
         </motion.div>
       </div>
     </section>

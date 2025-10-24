@@ -66,6 +66,8 @@ export function MeetTheFounders() {
                     width={256}
                     height={256}
                     className="object-cover w-full h-full"
+                    loading="lazy"
+                    quality={85}
                   />
                 </div>
                 <h3 className="text-xl font-bold font-heading text-white mb-2">

@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { siteConfig } from "@/site.config";
-import { ArrowRight } from "lucide-react";
 
 export function CaseStudies() {
   return (
@@ -51,6 +50,9 @@ export function CaseStudies() {
                   alt={study.title}
                   className="object-cover w-full h-full"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  priority={index < 2}
+                  loading={index < 2 ? "eager" : "lazy"}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent" />
               </div>
@@ -78,38 +80,6 @@ export function CaseStudies() {
             </motion.div>
           ))}
         </div>
-
-        {/* Call to Action Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <h2 className="text-4xl sm:text-5xl font-bold font-heading mb-3 text-white">
-            Ready to Get Started?
-          </h2>
-          <p className="text-lg text-white/70 mb-4 font-body">
-            Book a free strategy call to discuss your project.
-          </p>
-
-          <motion.a
-            href={siteConfig.company.calendlyLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.15 }}
-            className="inline-flex items-center gap-2 px-8 py-4 
-              bg-accent hover:bg-lighterblue 
-              text-[#0B1120] font-bold rounded-xl text-base
-              shadow-md shadow-accent/30 hover:shadow-accent/40 transition-all"
-          >
-            Book Strategy Call
-            <ArrowRight className="w-4 h-4" />
-          </motion.a>
-        </motion.div>
       </div>
     </section>
   );

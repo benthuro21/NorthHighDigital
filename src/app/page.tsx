@@ -1,14 +1,30 @@
+import dynamic from "next/dynamic";
 import { Header } from "./(site)/_components/header";
 import { Hero } from "./(site)/_components/hero";
 import { Marquee } from "./(site)/_components/marquee";
-import { Services } from "./(site)/_components/services";
-import { CaseStudies } from "./(site)/_components/case-studies";
-import { Process } from "./(site)/_components/process";
-import { WhyUs } from "./(site)/_components/why-us";
-import { Testimonials } from "./(site)/_components/testimonials";
-import { Contact } from "./(site)/_components/contact";
-import { Footer } from "./(site)/_components/footer";
-import { MeetTheFounders } from "./(site)/_components/meet-the-founders";
+
+// Lazy load components below the fold for better performance
+const CaseStudies = dynamic(() => import("./(site)/_components/case-studies").then(mod => ({ default: mod.CaseStudies })), {
+  loading: () => <div className="min-h-screen" />
+});
+const Process = dynamic(() => import("./(site)/_components/process").then(mod => ({ default: mod.Process })), {
+  loading: () => <div className="min-h-screen" />
+});
+const MeetTheFounders = dynamic(() => import("./(site)/_components/meet-the-founders").then(mod => ({ default: mod.MeetTheFounders })), {
+  loading: () => <div className="min-h-screen" />
+});
+const WhyUs = dynamic(() => import("./(site)/_components/why-us").then(mod => ({ default: mod.WhyUs })), {
+  loading: () => <div className="min-h-screen" />
+});
+const Testimonials = dynamic(() => import("./(site)/_components/testimonials").then(mod => ({ default: mod.Testimonials })), {
+  loading: () => <div className="min-h-screen" />
+});
+const Contact = dynamic(() => import("./(site)/_components/contact").then(mod => ({ default: mod.Contact })), {
+  loading: () => <div className="min-h-screen" />
+});
+const Footer = dynamic(() => import("./(site)/_components/footer").then(mod => ({ default: mod.Footer })), {
+  loading: () => <div className="min-h-screen" />
+});
 
 export default function Home() {
   return (
