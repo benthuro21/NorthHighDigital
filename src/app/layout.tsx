@@ -14,6 +14,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "North High Digital - We ship fast, clean software for founders & brands",
   description: "Design, build, and iterate — from idea to v1 to scale. Boutique software agency founded by Benjamin Thuroczy and Ardi Ahmed.",
+  icons: {
+    icon: "/nhd-favicon.svg",
+  },
   openGraph: {
     title: "North High Digital - We ship fast, clean software for founders & brands",
     description: "Design, build, and iterate — from idea to v1 to scale. Boutique software agency founded by Benjamin Thuroczy and Ardi Ahmed.",

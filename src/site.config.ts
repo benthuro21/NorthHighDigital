@@ -3,7 +3,7 @@ export const siteConfig = {
   company: {
     name: "North High Digital",
     tagline: "We ship fast, clean software for founders & brands.",
-    subhead: "Redefining digital excellence through code and communication.",
+    subhead: "Redefining digital excellence through software and communication.",
     founders: [
       {
         name: "Benjamin Thuroczy",
@@ -24,7 +24,7 @@ export const siteConfig = {
     // Contact
     contact: {
       email: "info@northhighdigital.com",
-      phone: "+1 (732) 397-7655",
+      phone: "+1 (216) 392-8158",
     },
   },
 
@@ -88,7 +88,7 @@ export const siteConfig = {
     },
     {
       title: "Law Firm Landing Page + Bookings",
-      result: "300% increase in online client bookings.",
+      result: "80% increase in online client bookings.",
       tags: ["Calendly", "Next.js", "Stripe"],
       image: "/images/case-studies/law-firm-case-study.png",
     },
