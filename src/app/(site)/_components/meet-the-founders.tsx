@@ -2,8 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { siteConfig } from "@/site.config";
-import { ArrowRight } from "lucide-react";
 
 export function MeetTheFounders() {
   const founders = [

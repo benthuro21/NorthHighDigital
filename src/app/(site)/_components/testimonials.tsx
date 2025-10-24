@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { siteConfig } from "@/site.config";
-import { ArrowRight } from "lucide-react";
 
 export function Testimonials() {
   return (

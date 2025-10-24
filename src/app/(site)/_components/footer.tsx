@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/site.config";
 import { Linkedin, Mail } from "lucide-react";
 
@@ -39,9 +40,11 @@ export function Footer() {
                     className="flex flex-col sm:flex-row items-center gap-4 bg-background/5 rounded-xl p-4 border border-border/30 hover:border-border/60 transition-colors min-w-[260px]"
                   >
                     {/* Founder Image */}
-                    <img
+                    <Image
                       src={founder.image}
                       alt={founder.name}
+                      width={56}
+                      height={56}
                       className="w-14 h-14 rounded-full object-cover"
                     />
 
