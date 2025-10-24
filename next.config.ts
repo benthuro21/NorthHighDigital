@@ -9,9 +9,6 @@ const nextConfig: NextConfig = {
     removeConsole: process.env.NODE_ENV === "production",
   },
 
-  // Enable SWC minification for faster builds
-  swcMinify: true,
-
   // Optimize chunk loading
   experimental: {
     optimizePackageImports: ['framer-motion', 'lucide-react'],
