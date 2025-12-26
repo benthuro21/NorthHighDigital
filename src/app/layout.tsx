@@ -22,7 +22,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: "North High Digital - We ship fast, clean software for founders & brands",
-  description: "Design, build, and iterate — from idea to v1 to scale. Boutique software agency founded by Benjamin Thuroczy and Ardi Ahmed.",
+  description: "Design, build, and iterate — from idea to v1 to scale. Boutique software agency founded by Benjamin and Ardi.",
   keywords: ["software agency", "web development", "app development", "digital transformation", "automation", "AI solutions"],
   authors: [{ name: "North High Digital" }],
   creator: "North High Digital",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "North High Digital - We ship fast, clean software for founders & brands",
-    description: "Design, build, and iterate — from idea to v1 to scale. Boutique software agency founded by Benjamin Thuroczy and Ardi Ahmed.",
+    description: "Design, build, and iterate — from idea to v1 to scale. Boutique software agency founded by Benjamin and Ardi.",
     type: "website",
     locale: "en_US",
   },
