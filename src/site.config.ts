@@ -8,7 +8,7 @@ export const siteConfig = {
       {
         name: "Benjamin",
         title: "Co-Founder",
-        linkedin: "https://www.linkedin.com/in/benjaminthuroczy/",
+        linkedin: "https://linkedin.com/company/north-high-digital",
         email: "benjamin@northhighdigital.com",
         image: "/images/founders/ben.jpg",
       },
@@ -20,7 +20,7 @@ export const siteConfig = {
         image: "/images/founders/ardi.png",
       },
     ],
-    calendlyLink: "https://calendly.com/benthuroczy",
+    calendlyLink: "#contact",
     // Contact
     contact: {
       email: "info@northhighdigital.com",
