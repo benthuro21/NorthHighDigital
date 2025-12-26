@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "pages:build": "next build && next-on-pages",
+    "pages:dev": "next dev",
     "start": "next start",
     "lint": "eslint"
   },
@@ -23,13 +25,14 @@
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.14",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.5.4",
+    "eslint-config-next": "15.5.9",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
