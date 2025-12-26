@@ -5,13 +5,11 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "pages:build": "next build && next-on-pages",
-    "pages:dev": "next dev",
     "start": "next start",
     "lint": "eslint"
   },
   "engines": {
-    "node": ">=18.18.0"
+    "node": "22.x"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
@@ -25,7 +23,6 @@
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.14",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
