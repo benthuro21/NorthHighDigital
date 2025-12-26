@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { siteConfig } from "@/site.config";
 
 export function CaseStudies() {
@@ -59,7 +60,18 @@ export function CaseStudies() {
 
               <div className="p-6">
                 <h3 className="text-xl font-semibold font-heading mb-2 text-white group-hover:text-accent transition-colors">
-                  {study.title}
+                  {study.link ? (
+                    <Link
+                      href={study.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      {study.title}
+                    </Link>
+                  ) : (
+                    study.title
+                  )}
                 </h3>
 
                 <p className="text-accent font-semibold mb-4">{study.result}</p>

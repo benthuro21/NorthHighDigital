@@ -6,13 +6,13 @@ import Image from "next/image";
 export function MeetTheFounders() {
   const founders = [
     {
-      name: "Benjamin Thuroczy",
+      name: "Benjamin",
       title: "Co-Founder & CEO",
       image: "/images/founders/ben.jpg",
       bio: "Software engineer with experience at JPMorgan Chase, where he worked as a Software Engineer and Business Analyst developing AI-powered solutions for risk management. Previously held roles at GE Aerospace managing supply chain operations and Swagelok as a Process Engineer. Combines technical expertise with data-driven strategy to build scalable solutions.",
     },
     {
-      name: "Ardi Ahmed",
+      name: "Ardi",
       title: "Co-Founder & CTO",
       image: "/images/founders/ardi.png",
       bio: "Software engineer with experience building production systems at high-growth startups. Master of designing and engineering production chat interfaces and admin panels with Next.js and Ruby on Rails, in order to implement dynamic conversation flows and RESTful API integrations. Expertise in initializing backend pipelines for data storage and retrieval using PostgreSQL, with a knack for CI/CD deployment and Git workflows. An esteemed full-stack development, creating scalable solutions from database architecture to responsive UI.",
