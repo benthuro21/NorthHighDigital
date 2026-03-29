@@ -20,11 +20,11 @@ export const siteConfig = {
         image: "/images/founders/ardi.png",
       },
     ],
-    calendlyLink: "#contact",
+    calendlyLink: "https://calendly.com/benjaminthuroczy/30min",
     // Contact
     contact: {
       email: "info@northhighdigital.com",
-      phone: "+1 (216) 392-8158",
+      //phone: "+1 (216) 392-8158",
     },
   },
 
