@@ -26,11 +26,6 @@ export const metadata: Metadata = {
   keywords: ["software agency", "web development", "app development", "digital transformation", "automation", "AI solutions"],
   authors: [{ name: "North High Digital" }],
   creator: "North High Digital",
-  icons: {
-    icon: { url: "/icon.svg", type: "image/svg+xml" },
-    shortcut: { url: "/icon.svg", type: "image/svg+xml" },
-    apple: { url: "/apple-icon.svg", type: "image/svg+xml" },
-  },
   openGraph: {
     title: "North High Digital - We ship fast, clean software for founders & brands",
     description: "Design, build, and iterate from idea to v1 to scale. Boutique software agency founded by Benjamin and Ardi.",
