@@ -44,16 +44,18 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-6xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold font-heading leading-tight text-white"
             >
-              We build{" "}
-              <TypingText
-                words={[
-                  "software that scales.",
-                  "apps that inspire.",
-                  "websites that convert.",
-                ]}
-                highlightColor="var(--accent)"
-                textColor="#FFFFFF"
-              />
+              <span className="block">We build</span>
+              <span className="block h-[1.2em]">
+                <TypingText
+                  words={[
+                    "software that scales.",
+                    "apps that inspire.",
+                    "websites that convert.",
+                  ]}
+                  highlightColor="var(--accent)"
+                  textColor="#FFFFFF"
+                />
+              </span>
             </motion.h1>
           </div>
 
@@ -62,17 +64,17 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-16"
           >
             <Button
               asChild
               variant="accent"
               size="lg"
-              className="group font-medium"
+              className="group font-medium px-12 py-6 text-xl h-auto"
             >
               <Link href={siteConfig.company.calendlyLink} target="_blank">
                 Book a discovery call
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
 
