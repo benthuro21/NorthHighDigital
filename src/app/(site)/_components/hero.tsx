@@ -57,16 +57,6 @@ export function Hero() {
             </motion.h1>
           </div>
 
-          {/* Subhead */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg sm:text-xl lg:text-2xl text-white/70 max-w-3xl mx-auto font-body"
-          >
-            {siteConfig.company.subhead}
-          </motion.p>
-
           {/* CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -86,9 +76,9 @@ export function Hero() {
               </Link>
             </Button>
 
-            <Button asChild variant="shaded" size="lg" className="font-medium">
+            {/* <Button asChild variant="shaded" size="lg" className="font-medium">
               <Link href="#work">See our case studies</Link>
-            </Button>
+            </Button> */}
           </motion.div>
         </motion.div>
       </div>
