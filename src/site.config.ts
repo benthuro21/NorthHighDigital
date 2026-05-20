@@ -20,7 +20,7 @@ export const siteConfig = {
         image: "/images/founders/ardi.png",
       },
     ],
-    calendlyLink: "https://calendly.com/benjaminthuroczy/30min",
+    calendlyLink: "https://calendly.com/benjaminthuroczy/chat",
     // Contact
     contact: {
       email: "info@northhighdigital.com",
