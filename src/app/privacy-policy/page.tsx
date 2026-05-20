@@ -10,7 +10,6 @@ import { Footer } from "../(site)/_components/footer";
 export default function PrivacyPolicyPage() {
   const companyName = siteConfig.company.name;
   const contactEmail = siteConfig.company.contact.email;
-  const contactPhone = siteConfig.company.contact.phone;
 
   const lastUpdated = "October 19, 2025";
 
@@ -180,15 +179,6 @@ export default function PrivacyPolicyPage() {
                   className="text-[var(--accent)] hover:underline transition-colors"
                 >
                   {contactEmail}
-                </a>
-              </p>
-              <p>
-                Phone:{" "}
-                <a
-                  href={`tel:${contactPhone}`}
-                  className="text-[var(--accent)] hover:underline transition-colors"
-                >
-                  {contactPhone}
                 </a>
               </p>
             </div>
