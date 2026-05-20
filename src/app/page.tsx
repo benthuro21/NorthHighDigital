@@ -34,7 +34,7 @@ export default function Home() {
         <Hero />
         <Marquee />
         {/* <Services /> */}
-        <CaseStudies />
+        {/* <CaseStudies /> */}
         <Process />
         <MeetTheFounders />
         <WhyUs />

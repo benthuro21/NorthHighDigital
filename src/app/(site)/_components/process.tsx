@@ -76,7 +76,7 @@ export function Process() {
           </p>
           <p className="text-lg text-white/70 max-w-2xl mx-auto mt-10 font-body">
             Our 3-phase process turns your digital presence into an automated
-            client machine — powered by smart design, seamless automation, and
+            client machine powered by smart design, seamless automation, and
             AI.
           </p>
         </motion.div>

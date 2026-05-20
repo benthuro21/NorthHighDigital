@@ -27,7 +27,7 @@ export function Footer() {
 
             <p className="text-background/70 font-body leading-relaxed mb-6 max-w-md">
               We ship fast, clean software for founders & brands. Design, build,
-              and iterate — from idea to v1 to scale.
+              and iterate from idea to v1 to scale.
             </p>
 
             {/* Founders Section */}
