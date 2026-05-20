@@ -38,7 +38,7 @@ export function Contact() {
                text-[#0B1120] font-bold rounded-xl text-lg
                shadow-lg shadow-accent/30 hover:shadow-accent/40 transition-all"
           >
-            Book a Strategy Call
+            Book a Discovery Call
             <ArrowRight className="w-5 h-5" />
           </motion.a>
         </motion.div>
