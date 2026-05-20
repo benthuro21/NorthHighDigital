@@ -128,14 +128,6 @@ export function Footer() {
                   {siteConfig.company.contact.email}
                 </a>
               </div>
-              <div>
-                <a
-                  href={`tel:${siteConfig.company.contact.phone}`}
-                  className="text-background/70 hover:text-background transition-colors font-body"
-                >
-                  {siteConfig.company.contact.phone}
-                </a>
-              </div>
               <div className="pt-4">
                 <motion.a
                   href={siteConfig.company.calendlyLink}
