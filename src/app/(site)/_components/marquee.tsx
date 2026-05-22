@@ -11,6 +11,7 @@ const logos = [
   "Benner Realty Group",
   "Eosso Management",
   "All Smiles Dental",
+  "Industrial Engineer AI",
 ];
 
 export function Marquee() {

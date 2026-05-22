@@ -43,7 +43,7 @@ export function Header() {
       } text-white`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="relative flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <motion.div
@@ -55,7 +55,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center space-x-8">
             {siteConfig.navigation.map((item) => (
               <Link
                 key={item.name}
@@ -71,7 +71,7 @@ export function Header() {
           <div className="hidden md:flex items-center space-x-4">
             <Button asChild variant="accent" size="sm" className="font-medium">
               <Link href={siteConfig.company.calendlyLink} target="_blank">
-                Book a discovery call
+                Book a Discovery Call
               </Link>
             </Button>
           </div>

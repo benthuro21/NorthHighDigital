@@ -73,7 +73,7 @@ export function Hero() {
               className="group font-medium px-12 py-6 text-xl h-auto"
             >
               <Link href={siteConfig.company.calendlyLink} target="_blank">
-                Book a discovery call
+                Book a Discovery Call
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
