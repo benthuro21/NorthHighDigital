@@ -1,7 +1,6 @@
 import dynamic from "next/dynamic";
 import { Header } from "./(site)/_components/header";
 import { Hero } from "./(site)/_components/hero";
-import { Marquee } from "./(site)/_components/marquee";
 
 // Lazy load components below the fold for better performance
 const CaseStudies = dynamic(() => import("./(site)/_components/case-studies").then(mod => ({ default: mod.CaseStudies })), {
@@ -32,7 +31,6 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Marquee />
         {/* <Services /> */}
         {/* <CaseStudies /> */}
         <Process />
